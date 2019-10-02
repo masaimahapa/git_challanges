@@ -1,0 +1,125 @@
+Your Initial Commit
+
+1. mkdir git-basic-exercises
+2. cd git-basic-exercises
+3. ls -a
+4. git init
+ls -a
+5. git status
+6. touch README.md
+ls -a
+git status
+7. git log
+8. git add README.md
+9. git status
+10. git reset -- README.md
+11. git commit -m'initial commit'
+12. git log
+
+--------------------------------------------------------
+MORE COMMITS
+
+1. nano README.md
+2. cat README.md
+3. git status
+4. git commit -m'second commit'
+
+----------------------------------------------------------
+CHECK THIS OUT
+
+1. git log
+3. git checkout 09025e
+4. cat README.md
+5. git checkout master
+6. cat README.md
+
+----------------------------------------------------------
+
+BRANCHING
+1. git branch
+2. git checkout -b milkshake-flavours
+3. git branch
+5. nano milkshakes.md
+6. git status
+7. git commit -m'added initial flavours'
+8. git log
+9. git checkout master
+10. git checkout -b history
+git log
+11. history > history.txt
+12. git commit -m'added history'
+git log
+13. git checkout milkshake-flavours
+git log
+14. nano README.md
+'hahahashahahahaha'
+git commit -m'random readme changes'
+15. git checkout history
+cat README.md
+16. rm README.md 
+echo 'booya'> README.md
+17. git commit -m'rewrote readme'
+18. git checkout master
+
+-------------------------------------------------
+
+MERGING
+
+1. git merge milkshake-flavours
+2. ls
+git log
+3. git merge history master
+4. ls
+git log
+
+--
+1. git checkout history
+git merge master
+2. git checkout master
+git log
+-------------------------------------------------
+GITHUB
+
+#push other branches, aside from the master..
+git push -u origin history
+
+add branch
+git remote add origin https://github.com/masaimahapa/git-basic-exercises.git
+------------------------------------------------
+PULLING AND REMOTES
+1. cd ..
+5. git clone https://github.com/Umuzi-org/tech-department
+6. cd tech-department
+7. git branch
+git log
+8. git branch -a
+9. git checkout -b project/git-basic-exercises
+10.git remote -v 
+
+-----------------------------------------------
+Multiple Repos
+1. git log
+2. cd ..
+cd git-basic-exercises
+3. git ..
+mkdir this-will-be-another-repo
+4. cd this-will-be-another-repo
+5. touch README.md
+6. cd ../git-basic-exercises
+git log
+------------------------------------
+GITIGNORE
+1. touch ignore-me.db
+2. git status
+3. nano .gitignore
+5. git status
+6. mkdir mkdir large-directory-that-should-be-local-only
+7. cd large-directory-that-should-be-local-only
+8. cd ..
+git status
+9. nano .gitignore
+"large-directory-that-should-be-local-only"
+10. git status
+
+
+
